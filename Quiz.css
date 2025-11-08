@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #180000;
+    font-size: 17px;
+    height: 100vh;
+    color: #fff;
+    font-family: 'Times New Roman', Times, sans-serif;
+    animation: bodyAnime 2s;
+}
+body.active{
+    height: 100%;
+}
+header{
+    width: 100%;
+}
+.title{
+    margin: 0;
+    padding: 5px 10px 5px;
+    text-align: center;
+    font-weight: bold;
+
+}
+span{
+    color: red;
+    padding: 0 5px;
+    font-size: 25px;
+}
+.emojis{
+    font-size: 17px;
+}
+.hr{
+    margin: 10px 0;
+    content: '';
+    border: none;
+    width: 100%;
+    height: 1px;
+    background-color: #360a0a;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ask{
+    width: 95%;
+    height: 95%;
+    animation: askAnimation 2s ease-in;
+}
+.askTitle{
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+}
+
+.formAsk{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+.formAsk:first-child{
+    margin-top: 0;
+}
+.formAskContent{
+    width: 95%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 5px;
+}
+.label{
+    padding: 0 0 10px;
+}
+input{
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+input:focus, .submit:focus {
+    outline: 2px solid rgb(255, 57, 90);
+    background-color: #360a0a;
+    color: #fff;
+}
+
+.btn{
+    position: absolute;
+    right: 35px;
+}
+.submit{
+    padding: 5px 10px;
+    background: rgb(255, 57, 90);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+}
+.submit:hover{
+    background-color: rgb(217, 32, 63);
+}
+
+
+
+footer{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, .4);
+}
+footer.active{
+    margin-top: 40px;
+}
+
+/* --- */
+@keyframes askAnimation {
+    from{
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes bodyAnime{
+    0%{
+        color: #180000;
+        transform: translateY(-1000px);
+    }
+    50%{
+        color: #360a0a;
+    }
+    100%{
+        color: #fff;
+    }
+}
